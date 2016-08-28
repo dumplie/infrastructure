@@ -1,0 +1,30 @@
+---
+- name: Configure Dumplie Vagrant Dev env
+  hosts: vagrant
+  sudo: yes
+  remote_user: vagrant
+  vars:
+    env_hostname: "dumplie-dev-vagrant"
+    apache_vhost_host: "dumplie.local"
+    apache_vhost_web_root: "/var/www/dumlie/web"
+
+    env_timezone: "UTC"
+
+    php_ini_lines:
+      - 'date.timezone = "UTC"'
+      - 'display_errors = On'
+      - 'error_reporting = -1'
+      - 'short_open_tag = 0'
+
+    pg_users: [{name: "dumplie", password: "dumplie", permissions: "CREATEDB"}]
+    pg_databases: [{name: "dumplie", owner: "pundumplieched"}]
+
+  roles:
+    - { role: env }
+    - { role: tools }
+    - { role: php7 }
+    - { role: nodejs }
+    - { role: apache }
+    - { role: apache_vhost }
+    - { role: composer }
+    - { role: postgresql }

@@ -1,0 +1,8 @@
+---
+galaxy_info:
+  description: apache_vhost
+  min_ansible_version: 1.4
+  categories:
+    - system
+  dependencies:
+    - apache
