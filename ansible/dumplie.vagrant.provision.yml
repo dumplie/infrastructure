@@ -6,7 +6,7 @@
   vars:
     env_hostname: "dumplie-dev-vagrant"
     apache_vhost_host: "dumplie.local"
-    apache_vhost_web_root: "/var/www/dumlie/shop/web"
+    apache_vhost_web_root: "/var/www/dumplie/shop/web"
 
     env_timezone: "UTC"
 
