@@ -17,7 +17,7 @@
       - 'short_open_tag = 0'
 
     pg_users: [{name: "dumplie", password: "dumplie", permissions: "CREATEDB"}]
-    pg_databases: [{name: "dumplie", owner: "pundumplieched"}]
+    pg_databases: [{name: "dumplie", owner: "dumplie"}]
 
   roles:
     - { role: env }
